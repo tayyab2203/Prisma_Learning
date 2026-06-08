@@ -1,8 +1,6 @@
 {
-  "routes": [
-    {
-      "src": "^/tasks(?:/(.*))?$",
-      "dest": "/api/tasks.js"
-    }
+  "rewrites": [
+    { "source": "/tasks", "destination": "/api/tasks" },
+    { "source": "/tasks/:path*", "destination": "/api/tasks/:path*" }
   ]
 }

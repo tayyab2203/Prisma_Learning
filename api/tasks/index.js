@@ -1,5 +1,5 @@
 const express = require('express')
-const taskRoutes = require('../src/routes/tasks.route')
+const taskRoutes = require('../../src/routes/tasks.route')
 
 const app = express()
 app.use(express.json())
