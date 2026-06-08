@@ -1,0 +1,11 @@
+{
+  "functions": {
+    "api/index.js": {
+      "runtime": "nodejs20.x"
+    }
+  },
+  "rewrites": [
+    { "source": "/tasks", "destination": "/api/tasks" },
+    { "source": "/tasks/:path*", "destination": "/api/tasks/:path*" }
+  ]
+}

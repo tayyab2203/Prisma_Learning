@@ -20,6 +20,11 @@ app.use((err, req, res, next) => {
   res.status(500).json({ message: 'Server error' })
 })
 
-app.listen(3000, () => {
-  console.log('Server chal raha hai port 3000 pe')
-})
+if (require.main === module) {
+  const port = process.env.PORT || 3000
+  app.listen(port, () => {
+    console.log(`Server chal raha hai port ${port} pe`)
+  })
+}
+
+module.exports = app
