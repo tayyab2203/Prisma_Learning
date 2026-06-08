@@ -6,7 +6,7 @@ const app = express()
 app.use(express.json())
 
 // Routes
-app.use('/tasks', taskRoutes)
+app.use('/api/tasks', taskRoutes)
 
 // Global error handler
 app.use((err, req, res, next) => {
